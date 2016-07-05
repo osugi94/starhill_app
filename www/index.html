@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        ons.bootstrap()
+          .controller('AppController', function() {
+            this.pushes = 0;
+            this.pops = 0;
+          });
+        /*ons.ready(function() {
+            console.log("Onsen UI is ready!");
+        });*/
+    </script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <ons-page>
+        <ons-navigator
+          var="navi"
+          page="page.html"
+          ng-controller="AppController as app"
+          ons-postpush="app.pushes = app.pushes + 1"
+          ons-postpop="app.pops = app.pops + 1">
+        </ons-navigator>
+    </ons-page>
+
+    <ons-template id="page.html">
+      <ons-page>
+        <!-- <ons-toolbar>
+          <div class="left">
+            <ons-back-button>Back</ons-back-button>
+          </div>
+          <div class="center">Navigation</div>
+        </ons-toolbar> -->
+        
+        <div id="header">
+            <div class="icon">
+                    <img src="img/icon_white.png" alt="icon" />
+            </div>
+            <div class="name_link">
+                <ons-button  onclick="hp_link();">
+                    <img src="img/title2.png" alt="title" />
+                </ons-button>
+                
+                <!-- <ons-button  onclick="hp_link();">
+                   <img src="img/link.png" alt="link" >
+                </ons-button> -->
+            </div>
+            <div class="blank">
+            </div>
+            <div class="about">
+               <ons-button  ng-click="navi.pushPage('')">
+                   <img src="img/i.png" alt="i" />
+               </ons-button>
+            </div>
+        </div>
+        <div class="info">
+                information
+        </div>
+        
+        <div id="info">
+            <div>
+                <table  id="information">
+                    <tr>
+                		
+                	</tr>
+                </table>
+            </div>
+        </div>
+        
+        <div id="contents">
+            <div id="movie">
+                <div class="title">
+                    星陵高校ムービーライブラリー
+                </div>
+                <table class="item">
+                    <tr>
+                        <td>
+                            <ons-button  onclick="";">
+                                <img src="img/sports.png" alt="sports" >
+                            </ons-button> 
+                        </td>
+                        <td>
+                            <ons-button  onclick="";">
+                                <img src="img/cultual.png" alt="clutual" >
+                            </ons-button> 
+                        </td><td>
+                            <ons-button  onclick="";">
+                                <img src="img/school.png" alt="school" >
+                            </ons-button> 
+                        </td><td>
+                            <ons-button  onclick="";">
+                                <img src="img/function.png" alt="function" >
+                            </ons-button> 
+                        </td>
+                	</tr>
+                    <tr>
+                        <td class="itemtext">運動部</td>
+                        <td class="itemtext">文化部</td>
+                        <td class="itemtext">学園生活</td>
+                        <td class="itemtext">行事</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="info2">
+                <div class="title">
+                    星陵高校情報・入試情報
+                </div>
+                <table class="item">
+                    <tr>
+                        <td>
+                            <ons-button  onclick="";">
+                                <img src="img/event.png" alt="event" >
+                            </ons-button> 
+                        </td>
+                        <td>
+                            <ons-button  onclick="";">
+                                <img src="img/entrance_examination.png" alt="ee" >
+                            </ons-button> 
+                        </td><td>
+                            <ons-button  onclick="";">
+                                <img src="img/news.png" alt="news" >
+                            </ons-button> 
+                        </td><td>
+                            <ons-button  onclick="";">
+                                <img src="img/access.png" alt="access" >
+                            </ons-button> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="itemtext">イベント</td>
+                        <td class="itemtext">入試</td>
+                        <td class="itemtext">記事</td>
+                        <td class="itemtext">アクセス</td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        
+        
+
+        <!-- <section style="padding: 10px">
+          <ons-button ng-click="navi.pushPage('page.html')">
+            Push Page
+          </ons-button>
+
+          <p>
+            You have pushed {{ app.pushes }} times and popped {{ app.pops }} times.
+          </p>
+        </section> -->
+      </ons-page>
+    </ons-template>
+
+</body>
+</html>
