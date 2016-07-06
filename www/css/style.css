@@ -1,60 +1,62 @@
 /**/
 
 body{
-    background-color: #f0f0f0;
+    background-color: black;
 }
 
 
 #header{
-    height: 15%; 
+    height: 15%;
     background: linear-gradient(#FDFDFD, #0E6DC9);
     
 }
 
 
-#header > .icon{
+#header  div.icon{
+    width: 20%;
     height: 100%;
-    width: 15%;
     float: left;
-    margin-left: 2%;
-    margin-right: 0;
+    text-align: left;
+    margin-right: auto;
     
 }
-#header > .icon > img{
+#header > .icon > ons-button{
+    background: none;
+    box-shadow: none;
+    width: 100%;
+    top: 20%;
+    left: 0;
+}
+
+#header > .icon > ons-button > img{
     max-height: 100%;
     max-width: 100%;
-    line-height: 100%;
-    margin-right: 0;
-    padding-top: 35%;
+    
 }
 
 
 
-#header > .name_link{
-    height: 100%;
-    width: 45%;
+#header div.name_link{
+    width: 75%;
+    height: 70%;
     float: left;
-    margin-left: 0;   
+    text-align: left;
 }
 #header > .name_link > ons-button{
     background: none;
     box-shadow: none;
-    width: 150%;
+    width: 100%;
+    top: 50%;
+    left: 0;
     
 }
 #header > .name_link > ons-button > img{
     max-height: 100%;
-    max-width: 110%;
-    padding-top: 7%;
+    max-width: 100%;
     
 }
 
-#header > .blank{
-    height: 100%;
-    width: 20%;
-    float: left;
-}
-#header > .about{
+/*#header > .about{
     height: 100%;
     width: 15%;
     float: left;
@@ -70,36 +72,30 @@ body{
 #header > .about > ons-button > img{
     max-height: 100%;
     max-width: 100%;
-}
+}*/
 
-
-.info{
-    height: 4%;
-    text-align: center;
-    line-height: 130%;
-    padding-top: 0;
-    
-    border: 1px solid;
-    border-radius: 20px;
-    margin-top: 2%;
-    margin-right: 2%;
-    margin-left: 2%;
-}
 
 #info{
-    height: 32%;
+    height: 38%;
+    margin: 2% 2%; 
+}
 
-    
-    background-color: #FFFFFF;
-    border: 1px solid #e0e0e0;
-    margin: 2% 2%;
-    
-    
+#info .info{
+    height: 11%;
+    width: 100%;
+    text-align: center;
+
+    border: 1px solid;
+    border-radius: 20px;
+    margin-bottom: 2%;
 }
 
 
-#info  div{
-    height: 100%;
+
+#info .update{
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    height: 85%;
     overflow-y: scroll;
 }
 
@@ -124,7 +120,6 @@ body{
 
 #contents{
     height: 44%;
-    background-color: #f0f0f0;
     margin: 0 2%;
 }
 
@@ -167,12 +162,8 @@ body{
     border-collapse: separate;
     border-spacing: 25%;
     text-align: center;
-    margin: 0;
 }
 
-.item td{
-    margin: 0 0;
-}
 
 .itemtext{
     width: 25%;

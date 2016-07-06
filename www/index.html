@@ -48,7 +48,9 @@
         
         <div id="header">
             <div class="icon">
+                <ons-button  ng-click="navi.pushPage('')">
                     <img src="img/icon_white.png" alt="icon" />
+                </ons-button>
             </div>
             <div class="name_link">
                 <ons-button  onclick="hp_link();">
@@ -59,20 +61,20 @@
                    <img src="img/link.png" alt="link" >
                 </ons-button> -->
             </div>
-            <div class="blank">
-            </div>
-            <div class="about">
+
+            <!-- <div class="about">
                <ons-button  ng-click="navi.pushPage('')">
                    <img src="img/i.png" alt="i" />
                </ons-button>
-            </div>
-        </div>
-        <div class="info">
-                information
+            </div> -->
         </div>
         
+        
         <div id="info">
-            <div>
+            <div class="info">
+                インフォメーション
+            </div>
+            <div class="update">
                 <table  id="information">
                     <tr>
                 		
@@ -121,7 +123,7 @@
                     星陵高校情報・入試情報
                 </div>
                 <table class="item">
-                    <tr>
+                    <tr class="first">
                         <td>
                             <ons-button  onclick="";">
                                 <img src="img/event.png" alt="event" >
