@@ -23,6 +23,10 @@
         /*ons.ready(function() {
             console.log("Onsen UI is ready!");
         });*/
+        
+        function hp_link() {
+            window.open('★URL★' , '★target★', '★options★');
+        };
     </script>
     <script src="js/main.js"></script>
 </head>
@@ -47,15 +51,15 @@
         </ons-toolbar> -->
         
         <div id="header">
-            <div class="icon">
-                <ons-button  ng-click="navi.pushPage('')">
+            
+                <ons-button  ng-click="navi.pushPage('')" class="icon">
                     <img src="img/icon_white.png" alt="icon" />
                 </ons-button>
-            </div>
-            <div class="name_link">
-                <ons-button  onclick="hp_link();">
+                <div onclick="link();" class="title">
                     <img src="img/title2.png" alt="title" />
-                </ons-button>
+                </div>
+                    
+
                 
                 <!-- <ons-button  onclick="hp_link();">
                    <img src="img/link.png" alt="link" >
@@ -71,8 +75,8 @@
         
         
         <div id="info">
-            <div class="info">
-                インフォメーション
+            <div class="contents_title">
+                お知らせ
             </div>
             <div class="update">
                 <table  id="information">
@@ -85,7 +89,7 @@
         
         <div id="contents">
             <div id="movie">
-                <div class="title">
+                <div class="contents_title">
                     星陵高校ムービーライブラリー
                 </div>
                 <table class="item">
@@ -93,62 +97,59 @@
                         <td>
                             <ons-button  onclick="";">
                                 <img src="img/sports.png" alt="sports" >
+                                <br>運動部
                             </ons-button> 
                         </td>
                         <td>
                             <ons-button  onclick="";">
                                 <img src="img/cultual.png" alt="clutual" >
+                                <br>文化部
                             </ons-button> 
                         </td><td>
                             <ons-button  onclick="";">
                                 <img src="img/school.png" alt="school" >
+                                <br>学園生活
                             </ons-button> 
                         </td><td>
                             <ons-button  onclick="";">
                                 <img src="img/function.png" alt="function" >
+                                <br>行事
                             </ons-button> 
                         </td>
                 	</tr>
-                    <tr>
-                        <td class="itemtext">運動部</td>
-                        <td class="itemtext">文化部</td>
-                        <td class="itemtext">学園生活</td>
-                        <td class="itemtext">行事</td>
-                    </tr>
                 </table>
             </div>
             
             <div id="info2">
-                <div class="title">
+                <div class="contents_title">
                     星陵高校情報・入試情報
                 </div>
                 <table class="item">
-                    <tr class="first">
+                    <tr>
                         <td>
                             <ons-button  onclick="";">
                                 <img src="img/event.png" alt="event" >
+                                <br>イベント
                             </ons-button> 
                         </td>
                         <td>
                             <ons-button  onclick="";">
                                 <img src="img/entrance_examination.png" alt="ee" >
+                                <br>入試
                             </ons-button> 
                         </td><td>
                             <ons-button  onclick="";">
                                 <img src="img/news.png" alt="news" >
+                                <br>記事
                             </ons-button> 
                         </td><td>
                             <ons-button  onclick="";">
                                 <img src="img/access.png" alt="access" >
+                                <br>アクセス
                             </ons-button> 
                         </td>
                     </tr>
-                    <tr>
-                        <td class="itemtext">イベント</td>
-                        <td class="itemtext">入試</td>
-                        <td class="itemtext">記事</td>
-                        <td class="itemtext">アクセス</td>
-                    </tr>
+
                 </table>
             </div>
             
